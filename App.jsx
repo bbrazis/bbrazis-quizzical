@@ -150,8 +150,8 @@ export default function App() {
                     reset={resetQuiz}
                 />
             }
-            <img src="../images/blue-blob.svg" className="blob blue" alt="" />
-            <img src="../images/yellow-blob.svg" className="blob yellow" alt="" />
+            <img src="./images/blue-blob.svg" className="blob blue" alt="" />
+            <img src="./images/yellow-blob.svg" className="blob yellow" alt="" />
         </div>
     )
 }
