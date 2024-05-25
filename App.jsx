@@ -1,5 +1,6 @@
 import React from 'react'
 import Quiz from './Quiz'
+import blobBlue from '.images/blue-blob.svg'
 
 export default function App() {
     const [quiz, setQuiz] = React.useState([])
@@ -150,7 +151,7 @@ export default function App() {
                     reset={resetQuiz}
                 />
             }
-            <img src="./images/blue-blob.svg" className="blob blue" alt="" />
+            <img src={blobBlue} className="blob blue" alt="" />
             <img src="./images/yellow-blob.svg" className="blob yellow" alt="" />
         </div>
     )
