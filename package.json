@@ -1,6 +1,6 @@
 {
-  "name": "Scrim-s0e41o8i2o",
-  "description": "https://v2.scrimba.com/s0e41o8i2o",
+  "name": "Quizzical",
+  "description": "https://v2.scrimba.com/s0e41o8i2o, Quizzical project by bbrazis",
   "scripts": {
     "start": "vite",
     "dev": "vite",
