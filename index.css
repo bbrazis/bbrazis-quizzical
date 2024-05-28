@@ -150,14 +150,16 @@
         display: none;
     }
 
+    label:has(input:checked).correct,
     .correct {
-        --bkg: var(--correct) !important;
+        --bkg: var(--correct);
         background: var(--bkg);
         border-color: var(--bkg);
     }
 
+    label:has(input:checked).incorrect,
     .incorrect {
-        --bkg: var(--incorrect) !important;
+        --bkg: var(--incorrect);
         background: var(--bkg);
         border-color: var(--bkg);
         opacity: .5;
@@ -222,5 +224,36 @@
     body:has(.dark-mode){
         background: var(--default-color);
         color: var(--off-white);
+
+        h1, h2 {
+            color: var(--white);
+        }
+
+        button {
+            background: var(--off-black);
+            color: var(--off-white);
+        }
+
+        button:active {
+            background: var(--btn-bkg);
+        }
+
+        label {
+            border-color: var(--bkg);
+            color: var(--white);
+        }
+
+        label:has(input:checked) {
+            --bkg: var(--off-white);
+            color: black;
+        }
+
+        label:has(input:checked).correct {
+            color: black;
+        }
+
+        label:has(input:checked).incorrect {
+            color: black;
+        }
     }
 }
