@@ -15,8 +15,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     const newColorScheme = event.matches ? "dark" : "light";
     
     if(newColorScheme === "dark") {
-        root.querySelectorAll('.wrapper')[0].classList.add('dark-mode')
+        root.querySelector('.wrapper').classList.add('dark-mode')
     } else {
-	    root.querySelectorAll('.wrapper')[0].classList.remove('dark-mode')
+	    root.querySelector('.wrapper').classList.remove('dark-mode')
     }
 });
