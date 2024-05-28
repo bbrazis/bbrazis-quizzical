@@ -116,7 +116,7 @@ export default function App() {
     }
     
     return (
-        <div className="wrapper">
+        <main className="wrapper">
             {
                 inProgress !== true &&
                 <div className="container flex-vert container-centered">
@@ -154,6 +154,6 @@ export default function App() {
             }
             <img src={blobBlue} className="blob blue" alt="" />
             <img src={blobYellow} className="blob yellow" alt="" />
-        </div>
+        </main>
     )
 }
