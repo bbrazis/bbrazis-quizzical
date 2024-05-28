@@ -231,11 +231,25 @@
 
         button {
             background: var(--off-black);
+            border-color: var(--off-black);
             color: var(--off-white);
         }
 
         button:active {
             background: var(--btn-bkg);
+            border-color: var(--btn-bkg);
+        }
+
+        .options-wrapper {
+            background: var(--off-black);
+        }
+
+        .quiz-options {
+
+        }
+
+        .quiz-options label {
+
         }
 
         label {
