@@ -1,8 +1,8 @@
-const wrapper = document.querySelectorAll('.wrapper')[0]
-console.log(wrapper)
+const root = document.getElementById('root')
+
 /* detect if using dark mode theme */
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // wrapper.classList.add('dark-mode')
+    root.classList.add('dark-mode')
 }
 
 /* watching for theme changes */
@@ -10,8 +10,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     const newColorScheme = event.matches ? "dark" : "light";
     
     if(newColorScheme === "dark") {
-        // wrapper.classList.add('dark-mode')
+        root.classList.add('dark-mode')
     } else {
-        wrapper.classList.remove('dark-mode')
+        root.classList.remove('dark-mode')
     }
 });
