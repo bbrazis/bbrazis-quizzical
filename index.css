@@ -245,7 +245,7 @@
         }
 
         .quiz-options {
-
+            background: var(--default-color);
         }
 
         .quiz-options label {
