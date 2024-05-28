@@ -7,7 +7,7 @@ ReactDOM.createRoot(root).render(<App />);
 
 /* detect if using dark mode theme */
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    root.querySelectorAll('.app')[0].classList.add('dark-mode')
+    root.querySelectorAll('.wrapper')[0].classList.add('dark-mode')
 }
 
 /* watching for theme changes */
@@ -15,8 +15,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     const newColorScheme = event.matches ? "dark" : "light";
     
     if(newColorScheme === "dark") {
-        root.querySelectorAll('.app')[0].classList.add('dark-mode')
+        root.querySelectorAll('.wrapper')[0].classList.add('dark-mode')
     } else {
-	    root.querySelectorAll('.app')[0].classList.remove('dark-mode')
+	    root.querySelectorAll('.wrapper')[0].classList.remove('dark-mode')
     }
 });
