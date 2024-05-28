@@ -4,29 +4,12 @@ import blobBlue from './images/blue-blob.svg'
 import blobYellow from './images/yellow-blob.svg'
 
 export default function App() {
-    const wrapper = document.querySelector('wrapper')
     const [quiz, setQuiz] = React.useState([])
     const [inProgress, setInProgress] = React.useState(false)
     const [answerState, setAnswerState] = React.useState(false)
     const [correctAnswers, setCorrectAnswers] = React.useState(0)
     const [difficulty, setDifficulty] = React.useState("easy")
     const [numberOfQuestions,setNumberOfQuestions] = React.useState(5)
-
-    /* detect if using dark mode theme */
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        wrapper.classList.add('dark-mode')
-    }
-
-    /* watching for theme changes */
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        const newColorScheme = event.matches ? "dark" : "light";
-        
-        if(newColorScheme === "dark") {
-            wrapper.classList.add('dark-mode')
-        } else {
-            wrapper.classList.remove('dark-mode')
-        }
-    });
     
     React.useEffect(()=>{
         if(inProgress === true && answerState !== true){
