@@ -257,7 +257,8 @@
             color: black;
         }
 
-        label:has(input:checked).correct {
+        label:has(input:checked).correct,
+        .correct {
             --bkg: var(--correct);
             color: black;
         }
