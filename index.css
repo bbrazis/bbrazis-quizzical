@@ -250,10 +250,6 @@
             border-color: transparent;
         }
 
-        .quiz-options label {
-
-        }
-
         label {
             border-color: var(--bkg);
             color: var(--white);

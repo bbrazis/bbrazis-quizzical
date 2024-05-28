@@ -123,7 +123,7 @@ export default function App() {
                     <h1>Quizzical</h1>
                     <p>Everyone's favorite Quiz app!</p>
                     <div className="options-wrapper flex-vert">
-                        <p>Below are some options for the quiz.</p>
+                        <h2>Below are some options for the quiz.</h2>
                         <div className="quiz-options">
                             <div className="flex-vert">
                                 <label htmlFor="difficulty">Difficulty</label>
