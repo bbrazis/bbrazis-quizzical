@@ -118,10 +118,6 @@
 
     .quiz-item:first-of-type { padding-block-start: 0; }
 
-    .quiz-item h2 {
-        font-size: 1.25rem;
-    }
-
     .answers {
         display: flex;
         gap: 1rem;
@@ -244,6 +240,8 @@
         .options-wrapper {
             background: var(--off-black);
         }
+
+        .options-wrapper h2 { font-size: 1.25rem; }
 
         .quiz-options {
             background: transparent;
