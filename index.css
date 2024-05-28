@@ -130,6 +130,7 @@
 
     label {
         padding: .5em 1em;
+        font-family: inherit;
         font-size: .875rem;
         border: 1px solid var(--default-color);
         border-radius: .75rem;
@@ -245,7 +246,8 @@
         }
 
         .quiz-options {
-            background: var(--default-color);
+            background: transparent;
+            border-color: transparent;
         }
 
         .quiz-options label {
