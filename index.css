@@ -43,6 +43,8 @@
         text-wrap: balance;
     }
 
+    h2 { font-size: 1.25rem; }
+
     p { text-wrap: pretty; }
 
     .blob {
@@ -89,6 +91,7 @@
         border-color: var(--el-bkg);
         border-width: 1px;
         border-style: solid;
+        font-family: inherit;
         padding: .75em 1.5em;
         border-radius: .75rem;
         transition: border-color 200ms, background 200ms;
@@ -227,21 +230,17 @@
         }
 
         button {
-            background: var(--off-black);
-            border-color: var(--off-black);
+            --el-bkg: var(--off-black);
             color: var(--off-white);
         }
 
         button:active {
-            background: var(--btn-bkg);
-            border-color: var(--btn-bkg);
+            --el-bkg: var(--btn-bkg);
         }
 
         .options-wrapper {
             background: var(--off-black);
         }
-
-        .options-wrapper h2 { font-size: 1.25rem; }
 
         .quiz-options {
             background: transparent;
