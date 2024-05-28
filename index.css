@@ -258,10 +258,12 @@
         }
 
         label:has(input:checked).correct {
+            --bkg: var(--correct);
             color: black;
         }
 
         label:has(input:checked).incorrect {
+            --bkg: var(--incorrect);
             color: black;
         }
     }
