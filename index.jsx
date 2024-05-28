@@ -7,7 +7,7 @@ ReactDOM.createRoot(root).render(<App />);
 
 /* detect if using dark mode theme */
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    root.querySelectorAll('.wrapper')[0].classList.add('dark-mode')
+    root.querySelector('.wrapper').classList.add('dark-mode')
 }
 
 /* watching for theme changes */
