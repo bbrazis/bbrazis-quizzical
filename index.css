@@ -253,7 +253,7 @@
             --el-bkg: var(--btn-bkg);
         }
 
-        .subheading { color: var(--selected); }
+        .subheading { color: var(--off-white); }
 
         .options-wrapper {
             background: var(--off-black);
