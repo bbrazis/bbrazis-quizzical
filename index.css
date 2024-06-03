@@ -197,6 +197,8 @@
 
     .options-wrapper p { max-width: 34ch; font-size: .875rem; }
 
+    .options-wrapper h2 { max-width: 15ch; }
+
     .quiz-options {
         padding: 1rem;
         display: grid;
