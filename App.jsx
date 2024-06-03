@@ -116,6 +116,7 @@ export default function App() {
     }
     
     const customSelect = document.getElementsByClassName('custom-select')
+    console.log(customSelect)
     const customSelectLength = customSelect.length
     for(i = 0; i < customSelectLength; i++){
         const selElement = customSelect[i].getElementsByTagName('select')[0]
