@@ -121,7 +121,7 @@ export default function App() {
                 inProgress !== true &&
                 <div className="container flex-vert container-centered">
                     <h1>Quizzical</h1>
-                    <p>Everyone's favorite Quiz app!</p>
+                    <p className="subheading">Everyone's favorite Quiz app!</p>
                     <div className="options-wrapper flex-vert">
                         <h2>Below are some options for the quiz.</h2>
                         <div className="quiz-options">
