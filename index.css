@@ -52,6 +52,7 @@
     .subheading {
         font-family: "Karla", sans-serif;
         text-transform: uppercase;
+        color: var(--selected);
     }
 
     input { font-family: inherit; }
@@ -251,6 +252,8 @@
         button:active {
             --el-bkg: var(--btn-bkg);
         }
+
+        .subheading { color: var(--selected); }
 
         .options-wrapper {
             background: var(--off-black);
