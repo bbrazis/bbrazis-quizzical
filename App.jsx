@@ -130,6 +130,10 @@ export default function App() {
         }
     }
 
+    const handleChangeSelect = (e) => {
+        console.log(e)
+    }
+
     return (
         <main className="wrapper">
             {
@@ -148,7 +152,7 @@ export default function App() {
                                     <option value="hard">Hard</option>
                                 </select>
                                 <CustomSelect
-                                    onChange={(e)=> handleChange(e)}
+                                    onChange={(e) => handleChangeSelect(e)}
                                     options = {options}
                                     placeHolder='Please select...'
                                 />
