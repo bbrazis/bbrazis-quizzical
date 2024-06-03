@@ -43,9 +43,9 @@
         text-wrap: balance;
     }
 
-    h1 { font-size: clamp(2rem, 2.25vh, 3rem); }
+    h1 { font-size: clamp(2rem, 5vh, 3rem); }
 
-    h2 { font-size: clamp(1.25rem, 1.5vh, 2rem); }
+    h2 { font-size: clamp(1.25rem, 3.5vh, 2rem); }
 
     p { text-wrap: pretty; }
 
