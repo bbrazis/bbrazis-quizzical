@@ -114,85 +114,6 @@ export default function App() {
             // do nothing
         }
     }
-    
-    const customSelect = document.getElementsByClassName('custom-select')
-    
-    if(customSelect.length < 0){
-        const customSelectLength = customSelect.length
-        for(i = 0; i < customSelectLength; i++){
-            const selElement = customSelect[i].getElementsByTagName('select')[0]
-            const selElementLength = selElement.length
-            /* for each element, create a new div that will act as the selected item */
-            const selOption = createElement('div')
-            selOption.setAttribute('class', 'select-selected')
-            selOption.innerHTML = selElement.options[selElement.selectedIndex].innerHTML
-            customSelect[i].appendChild(selOption)
-            /* for each element, create a new div that will contain the option list */
-            const optionList = document.createElement('div')
-            optionList.setAttribute('class', 'select-items select-hide')
-            for(j = 1; j < selElementLength; j++) {
-                /* for each option in the original select element,
-                create a new div that will act as an option item */
-                const optionItem = document.createElement('div')
-                optionItem.innerHTML = selElement.options[j].innerHTML
-                optionItem.addEventListener('click', (e) => {
-                    /* when an item is clicked, update the original
-                    select box, and the select item */
-                    const selectBox = this.parentNode.parentNode.getElementsByTagName('select')[0]
-                    const selectBoxLength = selectBox.length
-                    const selectBoxPrevious = this.parentNode.previousSibling
-                    for(y = 0; y < selectBoxLength; y++){
-                        if(selectBox.options[y].innerHTML === this.innerHTML) {
-                            selectBox.selectedIndex = y
-                            selectBoxPrevious.innerHTML = this.innerHTML
-                            const sameAsSelected = this.parentNode.getElementsByClassName('same-as-selected')
-                            const sameAsSelectedLength = sameAsSelected.length
-                            for(k = 0; k < sameAsSelectedLength; k++){
-                                sameAsSelected[k].removeAttribute('class')
-                            }
-                            this.setAttribute('class', 'same-as-selected')
-                            break
-                        }
-                    }
-                    selectBoxPrevious.click()
-                })
-                optionList.appendChild(optionItem)
-            }
-            customSelect[i].appendChild(optionList)
-            selOption.addEventListener('click', (e) => {
-                /* when the select box is clicked, close any other select boxes,
-                and open/close the current select box */
-                e.stopPropagation()
-                closeAllSelect(this)
-                this.nextSibling.classList.toggle('select-hide')
-                this.classList.toggle('select-arrow-active')
-            })
-        }
-
-        function closeAllSelect(elmnt) {
-            /* a function that will close all select boxes in the document,
-            except the current select box */
-            const arrNo = []
-            const selectItems = document.getElementsByClassName('select-items')
-            const selectedItems = document.getElementsByClassName('select-selected')
-            const selectItemsLength = selectItems.length
-            const selectedItemsLength = selectedItems.length
-            for(i = 0; i < selectedItemsLength; i++){
-                if(elmnt === selectedItems[i]){
-                    arrNo.push(i)
-                } else {
-                    selectedItems[i].classList.remove('select-arrow-active')
-                }
-            }
-            for(i = 0; i < selectItemsLength; i++){
-                if(arrNo.indexOf(i)){
-                    selectItems[i].classList.add('select-hide')
-                }
-            }
-        }
-
-        document.addEventListener('click', closeAllSelect)
-    }
 
     return (
         <main className="wrapper">
@@ -206,13 +127,11 @@ export default function App() {
                         <div className="quiz-options">
                             <div className="flex-vert">
                                 <label htmlFor="difficulty">Difficulty</label>
-                                <div className="custom-select">
-                                    <select id="difficulty" name="difficulty" onChange={handleChange} value={difficulty}>
-                                        <option value="easy">Easy</option>
-                                        <option value="medium">Medium</option>
-                                        <option value="hard">Hard</option>
-                                    </select>
-                                </div>
+                                <select id="difficulty" name="difficulty" onChange={handleChange} value={difficulty}>
+                                    <option value="easy">Easy</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="hard">Hard</option>
+                                </select>
                             </div>
                             <div className="flex-vert">
                                 <label htmlFor="question-amount">Number of Questions</label>
