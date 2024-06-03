@@ -2,6 +2,7 @@ import React from 'react'
 import Quiz from './Quiz'
 import blobBlue from './images/blue-blob.svg'
 import blobYellow from './images/yellow-blob.svg'
+import CustomSelect from './CustomSelect'
 
 export default function App() {
     const [quiz, setQuiz] = React.useState([])
@@ -132,6 +133,11 @@ export default function App() {
                                     <option value="medium">Medium</option>
                                     <option value="hard">Hard</option>
                                 </select>
+                                <CustomSelect
+                                    onChange={(e)=> handleChange(e)}
+                                    options = {['easy','medium','hard']}
+                                    placeHolder='Please select...'
+                                />
                             </div>
                             <div className="flex-vert">
                                 <label htmlFor="question-amount">Number of Questions</label>
