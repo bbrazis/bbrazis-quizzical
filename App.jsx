@@ -11,6 +11,20 @@ export default function App() {
     const [correctAnswers, setCorrectAnswers] = React.useState(0)
     const [difficulty, setDifficulty] = React.useState("easy")
     const [numberOfQuestions,setNumberOfQuestions] = React.useState(5)
+    const [options, setOptions] = React.useState([
+        {
+            label: 'easy',
+            value: 'easy'
+        },
+        {
+            label: 'medium',
+            value: 'medium'
+        },
+        {
+            label: 'hard',
+            value: 'hard'
+        }
+    ])
     
     React.useEffect(()=>{
         if(inProgress === true && answerState !== true){
@@ -135,7 +149,7 @@ export default function App() {
                                 </select>
                                 <CustomSelect
                                     onChange={(e)=> handleChange(e)}
-                                    options = {['easy','medium','hard']}
+                                    options = {options}
                                     placeHolder='Please select...'
                                 />
                             </div>
