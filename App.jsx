@@ -127,11 +127,13 @@ export default function App() {
                         <div className="quiz-options">
                             <div className="flex-vert">
                                 <label htmlFor="difficulty">Difficulty</label>
-                                <select id="difficulty" name="difficulty" onChange={handleChange} value={difficulty}>
-                                    <option value="easy">Easy</option>
-                                    <option value="medium">Medium</option>
-                                    <option value="hard">Hard</option>
-                                </select>
+                                <div className="custom-select">
+                                    <select id="difficulty" name="difficulty" onChange={handleChange} value={difficulty}>
+                                        <option value="easy">Easy</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="hard">Hard</option>
+                                    </select>
+                                </div>
                             </div>
                             <div className="flex-vert">
                                 <label htmlFor="question-amount">Number of Questions</label>
