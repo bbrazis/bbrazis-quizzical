@@ -51,7 +51,7 @@
 
     .subheading {
         font-family: "Karla", sans-serif;
-        text-transform: capitalize;
+        text-transform: uppercase;
     }
 
     input { font-family: inherit; }
