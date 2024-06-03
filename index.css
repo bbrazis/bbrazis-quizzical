@@ -49,6 +49,8 @@
 
     p { text-wrap: pretty; }
 
+    input { font-family: inherit; }
+
     .blob {
         position: absolute;
         z-index: -1;
@@ -95,6 +97,7 @@
         border-color: var(--el-bkg);
         border-width: 1px;
         border-style: solid;
+        font-size: 1.25rem;
         font-family: inherit;
         padding: .75em 1.5em;
         border-radius: .75rem;
@@ -197,7 +200,7 @@
 
     .options-wrapper p { max-width: 34ch; font-size: .875rem; }
 
-    .options-wrapper h2 { max-width: 15ch; }
+    .options-wrapper h2 { max-width: 20ch; }
 
     .quiz-options {
         padding: 1rem;
