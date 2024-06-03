@@ -86,6 +86,8 @@
 
     .container-centered { align-self: center; }
 
+    .container-centered > * { text-align: center; }
+
     button {
         --el-bkg: var(--btn-bkg); /* local var */
         background: var(--el-bkg);
