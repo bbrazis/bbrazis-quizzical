@@ -49,6 +49,11 @@
 
     p { text-wrap: pretty; }
 
+    .subheading {
+        font-family: "Karla", sans-serif;
+        text-transform: capitalize;
+    }
+
     input { font-family: inherit; }
 
     .blob {
