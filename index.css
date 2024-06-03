@@ -233,6 +233,49 @@
     .quiz-options select {
         width: min-content;
     }
+
+    .custom-select { position: relative; }
+
+    .custom-select select { display: none; }
+
+    .select-selected { color: var(--selected); }
+    
+    /* Arrow inside the select element */
+    .select-selected:after {
+        position: absolute;
+        content: "";
+        top: .875rem;
+        right: .625rem;
+        width: 0;
+        height: 0;
+        border: .375rem solid transparent;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    /* Arrow when select box is open (active) */
+    .select-selected div, .select-selected {
+        border-color: transparent transparent #fff transparent;
+        top: .45rem;
+    }
+
+    /* style the items (options), including selected item */
+    .select-items div,.select-selected {
+        color: var(--default-bkg);
+        background-color: var(--btn-bkg);
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+    }
+
+    /* Hide the items when the select box is closed */
+    .select-hide {
+        display: none;
+    }
+
+    .select-items div:hover, .same-as-selected {
+        background-color: rgba(0,0,0,0.1);
+    }
 }
 
 @layer dark-mode {
