@@ -403,17 +403,13 @@
 
     select, input[type="number"] {
         font-family: inherit;
-        width: clamp(min-content,4vw,max-content);
+        width: 10ch;
         padding: .5em 1em;
         border-radius: .25rem;
     }
 
     select {
         padding-inline-end: 1em;
-    }
-
-    input[type="number"] {
-        /**/
     }
 }
 
