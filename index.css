@@ -237,7 +237,6 @@
     .quiz-options .flex-vert {
         justify-content: flex-start;
         align-items: flex-start;
-        width: min-content;
     }
 
     .quiz-options .flex-vert:nth-of-type(2) {
