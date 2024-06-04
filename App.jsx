@@ -11,20 +11,6 @@ export default function App() {
     const [correctAnswers, setCorrectAnswers] = React.useState(0)
     const [difficulty, setDifficulty] = React.useState("easy")
     const [numberOfQuestions,setNumberOfQuestions] = React.useState(5)
-    const [options, setOptions] = React.useState([
-        {
-            label: 'easy',
-            value: 'easy'
-        },
-        {
-            label: 'medium',
-            value: 'medium'
-        },
-        {
-            label: 'hard',
-            value: 'hard'
-        }
-    ])
     
     React.useEffect(()=>{
         if(inProgress === true && answerState !== true){
@@ -129,10 +115,6 @@ export default function App() {
             // do nothing
         }
     }
-
-    const handleChangeSelect = (e) => {
-        console.log(e)
-    }
     
     return (
         <main className="wrapper">
@@ -151,11 +133,6 @@ export default function App() {
                                     <option value="medium">Medium</option>
                                     <option value="hard">Hard</option>
                                 </select>
-                                <CustomSelect
-                                    options={options}
-                                    placeHolder="Please select..."
-                                    onChange={(e) => handleChangeSelect(e)}
-                                />
                             </div>
                             <div className="flex-vert">
                                 <label htmlFor="question-amount">Number of Questions</label>
