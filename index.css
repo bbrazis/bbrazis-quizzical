@@ -231,11 +231,13 @@
         gap: 1rem;
         border: var(--one-px) solid var(--default-bkg);
         border-radius: .5em;
+        width: 100%;
     }
 
     .quiz-options .flex-vert {
         justify-content: flex-start;
         align-items: flex-start;
+        width: min-content;
     }
 
     .quiz-options label {
@@ -403,6 +405,7 @@
 
     select, input[type="number"] {
         font-family: inherit;
+        display: block;
         width: 10ch;
         padding: .5em 1em;
         border-radius: .25rem;
