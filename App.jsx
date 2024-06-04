@@ -136,6 +136,7 @@ export default function App() {
     console.log(<CustomSelect
         options={options}
         placeHolder="Please select..."
+        onChange={(e) => handleChangeSelect(e)}
     />)
     return (
         <main className="wrapper">
