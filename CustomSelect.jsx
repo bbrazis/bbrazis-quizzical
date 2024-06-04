@@ -106,7 +106,7 @@ export default function({ placeHolder, options, isMulti, isSearchable, onChange,
     }
 
     const optionList = () => {
-        getOptions().map((option) => (
+        options.map((option) => (
             <div onClick={() => onItemClick(option)} key={option.value} className={`dropdown-item ${isSelected(option) && "selected"}`} >
                 {option.label}
             </div>
