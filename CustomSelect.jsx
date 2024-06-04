@@ -114,8 +114,22 @@ export default function({ placeHolder, options, isMulti, isSearchable, onChange,
         ))
     }
 
-    return(
-        <div className="custon--dropdown-container">
+    const Menu = () => (
+        <div className={`dropdown-menu alignment--${align || 'auto'}`}>
+            {
+                isSearchable && (
+                    <div className="search-box">
+                        <input className="form-control" onChange={onSearch} value={searchValue} ref={searchRef} />
+                    </div>
+                )
+            }
+            {optionList}
+        </div>
+    )
+
+    console.log(optionList)
+    return (
+        <div className="custom--dropdown-container">
             <div ref={inputRef} onClick={handleInputClick} className="dropdown-input">
                 <div className={`dropdown-selected-value ${!selectedValue || selectedValue.length === 0 ? 'placeholder' : ''}`}>
                     {getDisplay()}
@@ -125,18 +139,7 @@ export default function({ placeHolder, options, isMulti, isSearchable, onChange,
                 </div>
             </div>
             {
-                showMenu && (
-                    <div className={`dropdown-menu alignment--${align || 'auto'}`}>
-                        {
-                            isSearchable && (
-                                <div className="search-box">
-                                    <input className="form-control" onChange={onSearch} value={searchValue} ref={searchRef} />
-                                </div>
-                            )
-                        }
-                        
-                    </div>
-                )
+                console.log(showMenu)
             }
         </div>
     )
