@@ -104,7 +104,7 @@ export default function({ placeHolder, options, isMulti, isSearchable, onChange,
             option.label.toLowerCase().indexOf(searchValue.toLowerCase()) >= 0
         )
     }
-
+    console.log(options,getOptions(options))
     return(
         <div className="custon--dropdown-container">
             <div ref={inputRef} onClick={handleInputClick} className="dropdown-input">
