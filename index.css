@@ -400,6 +400,12 @@
         align-items: center;
         margin-left: var(--five-px);
     }
+
+    select, input[type="number"] {
+        width: min-content;
+        padding: .5em 1em;
+        border-radius: .25rem;
+    }
 }
 
 @layer dark-mode {
