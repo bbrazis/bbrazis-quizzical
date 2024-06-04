@@ -240,6 +240,11 @@
         width: min-content;
     }
 
+    .quiz-options .flex-vert:nth-of-type(2) {
+        align-items: flex-end;
+        text-align: end;
+    }
+
     .quiz-options label {
         padding: 0;
         border: none;
