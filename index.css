@@ -402,6 +402,7 @@
     }
 
     select, input[type="number"] {
+        font-family: inherit;
         width: min-content;
         padding: .5em 1em;
         border-radius: .25rem;
