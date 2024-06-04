@@ -133,7 +133,10 @@ export default function App() {
     const handleChangeSelect = (e) => {
         console.log(e)
     }
-
+    console.log(<CustomSelect
+        options={options}
+        placeHolder="Please select..."
+    />)
     return (
         <main className="wrapper">
             {
