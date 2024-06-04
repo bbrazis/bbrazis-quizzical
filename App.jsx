@@ -151,11 +151,6 @@ export default function App() {
                                     <option value="medium">Medium</option>
                                     <option value="hard">Hard</option>
                                 </select>
-                                <CustomSelect
-                                    
-                                    onChange={(e) => handleChangeSelect(e)}
-                                    placeHolder='Please select...'
-                                />
                             </div>
                             <div className="flex-vert">
                                 <label htmlFor="question-amount">Number of Questions</label>
