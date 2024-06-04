@@ -453,11 +453,11 @@
         }
 
         .custom--dropdown-container .dropdown-input .dropdown-selected-value.placeholder {
-            color: var(--selected);
+            color: var(--default-color);
         }
 
         .dropdown-input { background-color: var(--default-bkg); }
 
-        .dropdown-selected-value.placeholder { color: var(--default-color) ;}
+        
     }
 }
