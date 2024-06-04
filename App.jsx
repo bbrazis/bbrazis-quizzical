@@ -152,8 +152,8 @@ export default function App() {
                                     <option value="hard">Hard</option>
                                 </select>
                                 <CustomSelect
-                                    onChange={(e) => handleChangeSelect(e)}
                                     options = {options}
+                                    onChange={(e) => handleChangeSelect(e)}
                                     placeHolder='Please select...'
                                 />
                             </div>
