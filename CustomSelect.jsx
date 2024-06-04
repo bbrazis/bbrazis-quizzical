@@ -129,17 +129,17 @@ export default function({ placeHolder, options, isMulti, isSearchable, onChange,
     console.log(optionList)
     return (
         <div className="custom--dropdown-container">
-            <div ref={inputRef} onClick={handleInputClick} className="dropdown-input">
-                <div className={`dropdown-selected-value ${!selectedValue || selectedValue.length === 0 ? 'placeholder' : ''}`}>
-                    {getDisplay()}
-                </div>
-                <div className="dropdown-tool">
-                    <Icon isOpen={showMenu} />
-                </div>
-            </div>
             {
-                console.log(showMenu)
+                <div ref={inputRef} onClick={handleInputClick} className="dropdown-input">
+                    <div className={`dropdown-selected-value ${!selectedValue || selectedValue.length === 0 ? 'placeholder' : ''}`}>
+                        {getDisplay()}
+                    </div>
+                    <div className="dropdown-tool">
+                        <Icon isOpen={showMenu} />
+                    </div>
+                </div>
             }
+            {Menu}
         </div>
     )
 }
