@@ -134,9 +134,7 @@ export default function({ placeHolder, options, isMulti, isSearchable, onChange,
                                 </div>
                             )
                         }
-                        {
-                            optionList
-                        }
+                        
                     </div>
                 )
             }
