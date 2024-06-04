@@ -451,8 +451,11 @@
             --bkg: var(--incorrect);
             color: black;
         }
+        
         .custom--dropdown-container .dropdown-input .dropdown-selected-value.placeholder {
             color: var(--selected);
         }
+
+        .dropdown-input { background-color: var(--default-bkg); }
     }
 }
