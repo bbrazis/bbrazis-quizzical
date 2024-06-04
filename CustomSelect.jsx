@@ -105,6 +105,15 @@ export default function({ placeHolder, options, isMulti, isSearchable, onChange,
         )
     }
     console.log(options,getOptions(options))
+
+    const optionList = () => {
+        getOptions().map((option) => (
+            <div onClick={() => onItemClick(option)} key={option.value} className={`dropdown-item ${isSelected(option) && "selected"}`} >
+                {option.label}
+            </div>
+        ))
+    }
+
     return(
         <div className="custon--dropdown-container">
             <div ref={inputRef} onClick={handleInputClick} className="dropdown-input">
@@ -126,11 +135,7 @@ export default function({ placeHolder, options, isMulti, isSearchable, onChange,
                             )
                         }
                         {
-                            getOptions().map((option) => (
-                                <div onClick={() => onItemClick(option)} key={option.value} className={`dropdown-item ${isSelected(option) && "selected"}`} >
-                                    {option.label}
-                                </div>
-                            ))
+                            optionList
                         }
                     </div>
                 )
