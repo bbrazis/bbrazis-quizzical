@@ -434,6 +434,10 @@
         -webkit-appearance: none;
         -moz-appearance: none;
     }
+
+    select::-ms-expand {
+        display: none;
+    }
       
     select:focus {
         background-image:
