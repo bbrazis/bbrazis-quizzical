@@ -151,6 +151,7 @@
         background: rgba(from var(--_quiz-bkg) r g b / .8);
         color: var(--_quiz-text);
         -webkit-backdrop-filter: blur(.75rem);
+        backdrop-filter: blur(.75rem);
     }
 
     .quiz-item:first-of-type { padding-block-start: 0; }
