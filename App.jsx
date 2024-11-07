@@ -136,7 +136,7 @@ export default function App() {
                             </div>
                             <div className="flex-vert">
                                 <label htmlFor="question-amount">Number of Questions</label>
-                                <input name="question-amount" id="question-amount" type="number" onChange={handleChange} value={numberOfQuestions} />
+                                <input name="question-amount" id="question-amount" type="number" min="1" onChange={handleChange} value={numberOfQuestions} />
                             </div>
                         </div>
                     </div>
